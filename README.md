@@ -15,7 +15,7 @@
 <li>regenerate app key</li>
 </ol>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="  git clone https://github.com/sejutaimpian/upgrading-to-ci4.git"><pre>php artisan key:generate</pre></div>
-<ol dir="auto" start="5">
+<ol dir="auto" start="8">
 <li>ketikan perintah <code>php artisan serve</code> untuk menjalankan aplikasi
 </ol>
 <br>
