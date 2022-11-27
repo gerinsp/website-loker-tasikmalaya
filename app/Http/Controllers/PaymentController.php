@@ -37,7 +37,8 @@ class PaymentController extends Controller
             'invoice' => ['required'],
             'payment_method' => ['required'],
             'name' => ['required', 'max:225'],
-            'image' => ['image', 'file', 'max:1024']
+            'image' => ['image', 'file', 'max:1024'],
+            'payment_status' => ['required']
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;

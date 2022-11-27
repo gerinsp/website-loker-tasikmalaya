@@ -17,7 +17,8 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Invoice</th>
-          <th scope="col">Show detail</th>
+          <th scope="col">Nama</th>
+          <th scope="col">Detail</th>
         </tr>
       </thead>
       <tbody>
@@ -25,8 +26,9 @@
           <tr>
             <td>{{ $loop->iteration }}</td>
             <td><?= $payment->invoice ?></td>
+            <td><?= $payment->name ?></td>
             <td>
-                <a href="/dashboard/payments/{{ $payment->id }}" class="badge btn-info"><span data-feather="eye"></span></a>
+                <a href="/dashboard/payments/{{ $payment->id }}/edit" class="badge btn-info"><span data-feather="eye"></span></a>
             </td>
           </tr>
           @endforeach

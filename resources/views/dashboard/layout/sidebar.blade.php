@@ -14,9 +14,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/status*') ? 'active' : '' }}" href="/dashboard/status/{{ auth()->user()->username }}">
-            <span data-feather="help-circle"></span>
-            Status Akun
+          <a class="nav-link {{ Request::is('dashboard/status*') ? 'active' : '' }}" href="/dashboard/status/{{ auth()->user()->id }}">
+            <span data-feather="credit-card"></span>
+            Payment Status 
           </a>
         </li>
       </ul>

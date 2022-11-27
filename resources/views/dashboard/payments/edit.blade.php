@@ -15,7 +15,25 @@
       <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-              Details
+              Status Detail
+              @if ($payments->payment_status === "Sukses")
+                <div class="d-flex justify-content-end float-end">
+                  <span class="badge bg-primary">{{ $payments->payment_status }}</span>
+                </div>
+              @endif
+
+              @if ($payments->payment_status === "Gagal")
+                <div class="d-flex justify-content-end float-end">
+                  <span class="badge bg-danger">{{ $payments->payment_status }}</span>
+                </div>
+              @endif
+
+              @if ($payments->payment_status === "Waiting")
+                <div class="d-flex justify-content-end float-end">
+                  <span class="badge bg-secondary">{{ $payments->payment_status }}</span>
+                </div>
+              @endif
+              
             </div>
             <div class="card-body">
               <h5 class="card-title">Invoice : {{ $payments->invoice }}</h5>
@@ -24,9 +42,29 @@
               <p class="card-text">Bukti Pembayaran : </p>
               <img style="width: 200px;" src="{{ asset('storage/' . $payments->image) }}" alt="" srcset="">
               <br>
-              <a href="#" class="btn btn-secondary mt-4">Upgrade Pro</a>
-              <a href="#" class="btn btn-warning mt-4">Upgrade Pro Plus</a>
-              <a href="#" class="btn btn-danger justify-content-end mt-4">Tidak Valid</a>
+              <form action="/dashboard/payments/{{ $payments->id }}" method="post" class="d-inline">
+                @method('put')
+                @csrf
+                <div class="mt-4 col-md-5">
+                  <label for="payment_status" class="form-label">Status Pembayaran</label>
+                  <select name="payment_status" id="" class="form-select">
+                      @if(old('payment_status', $payments->payment_status) === "Waiting")
+                          <option value="{{ $payments->payment_status }}" selected>{{ $payments->payment_status }}</option>
+                          <option value="Failed">Failed</option>
+                          <option value="Sukses">Sukses</option>
+                      @elseif(old('payment_status', $payments->payment_status) === "Failed")
+                          <option value="{{ $payments->payment_status }}" selected>{{ $payments->payment_status }}</option>
+                          <option value="Waiting">Waiting</option>
+                          <option value="Sukses">Sukses</option>
+                      @else
+                          <option value="{{ $payments->payment_status }}" selected>{{ $payments->payment_status }}</option>
+                          <option value="Waiting">Waiting</option>
+                          <option value="Failed">Failed</option>
+                      @endif
+                  </select>
+              </div>
+                <button class="btn btn-danger justify-content-end mt-3" onclick="return confirm('Are you sure?')">Update Status Pembayaran</button>
+              </form>
             </div>
           </div>  
       </div>

@@ -52,10 +52,14 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 
 Route::resource('/dashboard/users', UserManagementController::class)->middleware('admin');
 
-Route::get('/dashboard/payments', [AdminPaymentController::class, 'index'])->middleware('auth');
-Route::get('/dashboard/payments/{payment:id}', [AdminPaymentController::class, 'edit'])->middleware('auth');
+// Route::get('/dashboard/payments', [AdminPaymentController::class, 'index'])->middleware('auth');
+// Route::get('/dashboard/payments/{payment:id}', [AdminPaymentController::class, 'edit'])->middleware('auth');
+// Route::put('/dashboard/payments/{payment:id}', [AdminPaymentController::class, 'edit'])->middleware('auth');
 
-Route::get('/dashboard/status/{user:username}', [UserStatusController::class, 'index'])->middleware('auth');
+Route::resource('/dashboard/payments', AdminPaymentController::class)->middleware('auth');
+
+Route::get('/dashboard/status/{user:id}', [UserStatusController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/status/{payment:id}/show', [UserStatusController::class, 'show'])->middleware('auth');
 
 Route::get('/payment', [PaymentController::class, 'index'])->middleware('auth');
 Route::get('/payment/instruksi', [PaymentController::class, 'instruksi'])->middleware('auth');

@@ -21,6 +21,9 @@
                 <input type="hidden" class="form-control" id="invoice" name="invoice" required autofocus value="#{{ mt_rand(100000, 1000000) }}">
             </div>
             <div class="mb-3">
+                <input type="hidden" class="form-control" id="payment_status" name="payment_status" required autofocus value="Waiting">
+            </div>
+            <div class="mb-3">
                 <label for="payment_method" class="form-label">Metode Pembayaran</label>
                 <select name="payment_method" id="" class="form-select">
                    <option value="Gopay">Gopay</option>
