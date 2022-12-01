@@ -8,11 +8,21 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    {{-- font google --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Noto+Sans+JP&family=Outfit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+      }
+    </style>
     <title>{{ $title }}</title>
   </head>
-  <body>
-    @include('partials.svg')  
+  <body class="bg-light">
+@include('partials.svg')  
 
 @include('partials.navbar')
 <div class="container mt-4">

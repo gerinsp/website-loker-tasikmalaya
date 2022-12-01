@@ -44,7 +44,13 @@
                 </div>
                @enderror
               </div>
-              <button class="w-100 btn btn-lg btn-warning mt-3" type="submit">Register</button>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Ketentuan Layanan
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg text-white mt-3" style="background-color: rgb(45 62 80)" type="submit">Register</button>
             </form>
             <small class="d-block text-center mt-3">Already Registered? <a href="/login">Login</a></small>
           </main>

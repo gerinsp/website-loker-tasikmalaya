@@ -15,9 +15,21 @@
 
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0-beta.0/dist/trix.css">
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0-beta.0/dist/trix.umd.min.js"></script>
+
+    {{-- font google --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Noto+Sans+JP&family=Outfit&display=swap" rel="stylesheet">
     <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+      }
       trix-toolbar [data-trix-button-group="file-tools"] {
         display: none;
+      }
+
+      .btn{
+        background-color: rgb(45 62 80);
       }
     </style>
   </head>

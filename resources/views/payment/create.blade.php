@@ -51,7 +51,7 @@
                 </div>
                 @enderror
               </div>
-            <button type="submit" class="btn btn-warning mt-3 mb-5">Kirim</button>
+            <button type="submit" class="btn text-white mt-3 mb-5" style="background-color: rgb(45 62 80)">Kirim</button>
         </form>
     </div>
 

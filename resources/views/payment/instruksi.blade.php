@@ -9,21 +9,18 @@
           <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
         </ol>
       </nav>
-
-      {{-- <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h4 class="display-6 fw-normal">Pasang Lowongan Anda di LokerTasikmalaya</h4>
-        <p class="fs-5 text-muted">Jika anda sedang mencari kandidat terbaik untuk perusahaan anda, silahkan posting lowongan anda di sini. Saat ini kami sedang menyediakan fitur uji coba gratis yang tertera di bawah ini.</p>
-      </div> --}}
       <main style="margin-top: 100px">
         <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 100px;" src="../img/gopay.png" alt="" srcset=""></h4>
-              </div>
-              <div class="card-body">
-                {{-- <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1> --}}
-                <ul class="list-unstyled mt-3 mb-4">
+          <div class="col mb-3">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-decoration-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 100px;" src="../img/gopay.png" alt="" srcset=""></h4>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-unstyled mt-3 mb-4">
                     <p class="text-start">Langkah-langkah pembayaran :</p>
                     <ul class="text-start">
                         1. Buka aplikasi Gojek.<br>
@@ -35,18 +32,21 @@
                         7. Masukkan PIN GoPay. <br>
                         8. Jika transfer GoPay berhasil, akan muncul notifikasi. <br>
                         9. Riwayat transaksi tersedia di halaman aplikasi Gojek.<br>    </ul>
-                </ul>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 100px;" src="../img/ovo.png" alt="" srcset=""></h4>
-              </div>
-              <div class="card-body">
-                {{-- <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1> --}}
-                <ul class="list-unstyled mt-3 mb-4">
+          <div class="col mb-3">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button text-decoration-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 100px;" src="../img/ovo.png" alt="" srcset=""></h4>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-unstyled mt-3 mb-4">
                     <p class="text-start">Langkah-langkah pembayaran :</p>
                     <ul class="text-start">
                         1. Buka aplikasi OVO<br>
@@ -59,17 +59,20 @@
                         8. Akan muncul pemberitahuan di layar apabila transfer berhasil dilakukan.<br>
                     </ul>
                 </ul>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 90px;" src="../img/bjb.png" alt="" srcset=""></h4>
-              </div>
-              <div class="card-body">
-                {{-- <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1> --}}
-                <ul class="list-unstyled mt-3 mb-4">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button text-decoration-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                  <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 90px;" src="../img/bjb.png" alt="" srcset=""></h4>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-unstyled mt-3 mb-4">
                     <p class="text-start">Langkah-langkah pembayaran :</p>
                     <ul class="text-start">
                         <p>Via ATM Bank lain :</p>
@@ -86,9 +89,7 @@
               </div>
             </div>
           </div>
-    
-        
       </main>
-      <a class="btn btn-warning" href="/payment/instruksi/create">Upload bukti transfer</a>
+      <a class="btn text-white mt-4" href="/payment/instruksi/create" style="background-color: rgb(45 62 80)">Upload bukti transfer</a>
       
 @endsection

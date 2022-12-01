@@ -26,7 +26,7 @@
                 </div>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-warning mb-5">Add Category</button>
+            <button type="submit" class="btn text-white mb-5">Add Category</button>
         </form>
     </div>
 

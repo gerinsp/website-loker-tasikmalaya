@@ -12,7 +12,7 @@
   @endif
 
   <div class="table-responsive col-lg-5">
-    <a href="/dashboard/users/create" class="btn btn-warning mb-3">Add new user</a>
+    <a href="/dashboard/users/create" class="btn text-white mb-3">Add new user</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>

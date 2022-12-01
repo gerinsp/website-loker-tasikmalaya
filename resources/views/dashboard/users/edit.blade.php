@@ -63,7 +63,7 @@
                     @endif
                 </select>
             </div>
-            <button type="submit" class="btn btn-warning mb-5">Update User</button>
+            <button type="submit" class="btn text-white mb-5">Update User</button>
         </form>
     </div>
 @endsection

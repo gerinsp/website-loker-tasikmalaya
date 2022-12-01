@@ -8,6 +8,25 @@
           <li class="breadcrumb-item active" aria-current="page">Halaman Home</li>
         </ol>
       </nav>
+
+      {{-- toash --}}
+
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div class="card" style="border-radius:20px; width:260px; height:75px;">
+          <div class="toast-body">
+            <a href="https://wa.me/6285863865446?text=Halo%20LokerTasikmalaya,%20Saya%20ingin%20bertanya%20mengenai%20pemasangan%20lowongan">
+            <div class="float-end text-decoration-none text-dark">
+              <h5 style="color: rgb(45 62 80)">Butuh Bantuan?</h5>
+              <p class="text-muted" style="line-height: 20px">Chat kami via whatsapp
+              </p>
+            </div>
+          </a>
+            <div class="">
+            <img src="img/wa.png" style="width: 45px;" alt="">
+          </div>
+          </div>
+        </div>
+      </div>
       @if(session()->has('success'))
       <div class="alert alert-success col-lg-12" role="alert">
         {{ session('success') }}
@@ -42,7 +61,7 @@
                 <h1 class="card-title pricing-card-title">Rp.20K<small class="text-muted fw-light">/bln</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     Dapatkan jumlah postingan lebih banyak jika mengupgrade ke akun <b>Pro</b><br>
-                  (Maksimal 15 Postingan)
+                  (Maksimal 10 Postingan)
                 </ul>
                 @auth
                 <a href="/payment" type="button" class="w-100 btn btn-lg btn-secondary">Upgrade Pro</a>
@@ -60,7 +79,7 @@
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">Rp.100K<small class="text-muted fw-light">/bln</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    Hanya dengan mengupgrade ke akun <b>Pro Plus</b> Anda bisa mendapatkan <b>Unlimited</b> postingan perbulannya, plus lowongan anda juga akan kami posting di instagram lokertasikmalaya. 
+                    Hanya dengan mengupgrade ke akun <b>Pro Plus</b> Anda bisa mendapatkan <b>Unlimited</b> postingan perbulannya. Lowongan anda akan di <b>Pin</b> oleh kami, plus akan kami posting juga di instagram @loker-tasikmalaya. 
                 </ul>
                 @auth
                 <a href="/payment" type="button" class="w-100 btn btn-lg btn-warning">Upgrade Pro Plus</a>

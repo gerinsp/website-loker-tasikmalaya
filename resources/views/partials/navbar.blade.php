@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(45 62 80)">
     <div class="container">
-        <a class="navbar-brand" href="#">LokerTasikmalaya</a>
+        <a class="navbar-brand text-bold" href="#">LokerTasikmalaya.id</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,8 +13,11 @@
             <a class="nav-link {{ ($active === "blog") ? 'active' : '' }}" href="/blog">Cari Loker</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Category</a>
+                <a class="nav-link {{ ($active === "forum") ? 'active' : '' }}" href="/forum">Forum Diskusi</a>
             </li>
+            {{-- <li class="nav-item">
+                <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Category</a>
+            </li> --}}
             
         </ul>
         <ul class="navbar-nav ms-auto">

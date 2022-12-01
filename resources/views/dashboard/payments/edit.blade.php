@@ -63,7 +63,7 @@
                       @endif
                   </select>
               </div>
-                <button class="btn btn-danger justify-content-end mt-3" onclick="return confirm('Are you sure?')">Update Status Pembayaran</button>
+                <button class="btn text-white justify-content-end mt-3" onclick="return confirm('Are you sure?')">Update Status Pembayaran</button>
               </form>
             </div>
           </div>  

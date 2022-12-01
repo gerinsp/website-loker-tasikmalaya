@@ -12,7 +12,7 @@
   @endif
 
   <div class="table-responsive col-lg-5">
-    <a href="/dashboard/categories/create" class="btn btn-warning mb-3">Create new category</a>
+    <a href="/dashboard/categories/create" class="btn text-white mb-3">Create new category</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>

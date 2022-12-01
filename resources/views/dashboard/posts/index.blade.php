@@ -18,12 +18,12 @@
   @endif
 
   <div class="table-responsive col-lg-8">
-    <a href="/dashboard/posts/create" class="btn btn-warning mb-3">Create new post</a>  
+    <a href="/dashboard/posts/create" class="btn text-white mb-3">Create new post</a>  
     <table class="table table-striped table-sm">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Judul</th>
+          <th scope="col">Posisi</th>
           <th scope="col">Category</th>
           <th scope="col">Action</th>
         </tr>
@@ -32,7 +32,7 @@
           @foreach ($posts as $post)
           <tr>
             <td>{{ $loop->iteration }}</td>
-            <td><?= $post->title ?></td>
+            <td><?= $post->posisi ?></td>
             <td><?= $post->category->name ?></td>
             <td>
                 <a href="/dashboard/posts/{{ $post->slug }}" class="badge btn-info"><span data-feather="eye"></span></a>

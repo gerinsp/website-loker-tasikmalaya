@@ -7,6 +7,9 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Payment;
+use App\Models\Company;
+use App\Models\Study;
+use App\Models\Location;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,7 +26,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Gerin Sena Pratama',
             'username' => 'gerinsp',
             'email' => 'denapratama7@gmail.com',
-            'password' => bcrypt('123')
+            'password' => bcrypt('123'),
+            'is_admin' => 1,
+            'akun_status' => 'Pro Plus'
         ]);
 
         // User::create([
@@ -31,7 +36,27 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'sena@gmail.com',
         //     'password' => bcrypt('123')
         // ]);
-        User::factory(3)->create();
+        User::factory(2)->create();
+
+        Company::factory(3)->create();
+
+        Study::create([
+            'study' => 'SD'
+        ]);
+
+        Study::create([
+            'study' => 'SMP'
+        ]);
+
+        Study::create([
+            'study' => 'SMA'
+        ]);
+
+        Study::create([
+            'study' => 'S1'
+        ]);
+
+        Location::factory(4)->create();
 
         Category::create([
             'name' => 'IT',
@@ -48,7 +73,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'sales-dan-marketing'
         ]);
 
-        Post::factory(20)->create();
+        Post::factory(10)->create();
 
         // Post::create([
         //     'title' => 'Judul Pertama',

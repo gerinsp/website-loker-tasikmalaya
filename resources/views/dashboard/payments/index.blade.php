@@ -26,7 +26,7 @@
           <tr>
             <td>{{ $loop->iteration }}</td>
             <td><?= $payment->invoice ?></td>
-            <td><?= $payment->name ?></td>
+            <td><?= $payment->user->name ?></td>
             <td>
                 <a href="/dashboard/payments/{{ $payment->id }}/edit" class="badge btn-info"><span data-feather="eye"></span></a>
             </td>

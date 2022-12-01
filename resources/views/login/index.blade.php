@@ -17,7 +17,7 @@
         </div>
       @endif
 
-        <main class="form-signin">
+        <main class="form-signin" style="margin-bottom: 100px">
             <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
             <form action="/login" method="post">
               @csrf
@@ -34,7 +34,7 @@
                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
               </div>
-              <button class="w-100 btn btn-lg btn-warning" type="submit">Login</button>
+              <button class="w-100 btn btn-lg text-white" style="background-color: rgb(45 62 80)" type="submit">Login</button>
             </form>
             <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Now!</a></small>
           </main>

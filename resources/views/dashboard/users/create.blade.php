@@ -52,7 +52,7 @@
                    <option value="Pro Plus">Pro Plus</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-warning mb-5">Add User</button>
+            <button type="submit" class="btn text-white mb-5">Add User</button>
         </form>
     </div>
 @endsection

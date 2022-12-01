@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\Study;
+use App\Models\Location;
 
 class PostController extends Controller
 {
@@ -29,7 +31,7 @@ class PostController extends Controller
     //     ]);
     // }
 
-    public function blog()
+    public function blog(Post $post)
     {
         $title = '';
         if(request('category')){
@@ -38,11 +40,16 @@ class PostController extends Controller
         } elseif(request('user')){
             $user = User::firstWhere('username', request('user'));
             $title = 'By ' . $user->name;
-        };
+        }
+        
         return view('blog', [
             'title' => 'Cari Loker ' . $title,
             'active' => 'blog',
-            'post' => Post::latest()->filter(request(['search', 'category', 'user']))->paginate(4)->withQueryString()
+            'post' => Post::where('pinned', 'no')->latest()->filter(request(['search', 'category', 'user']))->paginate(5)->withQueryString(),
+            'categories' => Category::all(),
+            'studies' => Study::all(),
+            'locations' => Location::all(),
+            'pinned' => Post::where('pinned', 'pin')->get()
         ]);
     }
 
@@ -51,7 +58,10 @@ class PostController extends Controller
         return view('post', [
             'title' => 'Single Post',
             'active' => 'blog',
-            'post' => $post
+            'post' => $post,
+            'categories' => Category::all(),
+            'studies' => Study::all(),
+            'locations' => Location::all()
         ]);
     }
 }
