@@ -26,7 +26,7 @@
                     <p class="text-start">Silahkan transfer dengan beberapa metode pembayaran dibawah ini.</p>
                     <img style="width: 100px" src="img/gopay.png" alt="" srcset="">
                     <img style="width: 100px" src="img/ovo.png" alt="" srcset="">
-                    <img style="width: 100px" src="img/bjb.png" alt="" srcset="">
+                    <img style="width: 80px" src="img/bjb.png" alt="" srcset="">
                     <br><br>
                     <small class="text-danger text-start" ><p>Note: Untuk lebih detailnya bisa melihat instruksi pembayaran.</p></small>
                 </ul>

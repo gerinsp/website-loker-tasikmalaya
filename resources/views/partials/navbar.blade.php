@@ -13,7 +13,7 @@
             <a class="nav-link {{ ($active === "blog") ? 'active' : '' }}" href="/blog">Cari Loker</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ ($active === "forum") ? 'active' : '' }}" href="/forum">Forum Diskusi</a>
+                <a class="nav-link {{ ($active === "comunity") ? 'active' : '' }}" href="/comunity">Komunitas</a>
             </li>
             {{-- <li class="nav-item">
                 <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Category</a>
@@ -28,6 +28,14 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/user-comunity/{{ auth()->user()->username }}"><i class="bi bi-people"></i> Komunitas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/user-comunity-post/{{ auth()->user()->username }}"><i class="bi bi-stickies"></i></i> Postingan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                      <a class="dropdown-item" href="/dashboard"><i class="bi bi-chat-left-dots"></i></i> Komentar 
+                      <span class="badge bg-primary rounded-pill">99+</span></li></a>
                   <li><hr class="dropdown-divider"></li>
                   <li>
                     <form action="/logout" method="post">

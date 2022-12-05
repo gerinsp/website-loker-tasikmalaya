@@ -67,7 +67,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button text-decoration-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                  <h4 class="my-0 fw-normal">Transfer Menggunakan <img style="width: 90px;" src="../img/bjb.png" alt="" srcset=""></h4>
+                  <h4 class="my-0 fw-normal">Transfer Menggunakan &nbsp;&nbsp;<img style="width: 80px;" src="../img/bjb.png" alt="" srcset=""></h4>
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">

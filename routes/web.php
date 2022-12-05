@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ComunityController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ComentaryController;
 use App\Http\Controllers\UserStatusController;
 use App\Http\Controllers\AdminPaymentController;
+use App\Http\Controllers\UserComunityController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\UserManagementController;
@@ -58,6 +61,11 @@ Route::resource('/dashboard/users', UserManagementController::class)->middleware
 
 Route::resource('/dashboard/payments', AdminPaymentController::class)->middleware('auth');
 
+Route::get('/user-comunity/{user:username}', 'App\Http\Controllers\UserComunityController@comunity')->middleware('auth');
+Route::get('/user-comunity-post/{user:username}', 'App\Http\Controllers\UserComunityController@post')->middleware('auth');
+
+Route::resource('/comentary', ComentaryController::class)->middleware('auth');
+
 Route::get('/dashboard/status/{user:id}', [UserStatusController::class, 'index'])->middleware('auth');
 Route::get('/dashboard/status/{payment:id}/show', [UserStatusController::class, 'show'])->middleware('auth');
 
@@ -65,5 +73,7 @@ Route::get('/payment', [PaymentController::class, 'index'])->middleware('auth');
 Route::get('/payment/instruksi', [PaymentController::class, 'instruksi'])->middleware('auth');
 Route::get('/payment/instruksi/create', [PaymentController::class, 'create'])->middleware('auth');
 Route::post('/payment/instruksi/create', [PaymentController::class, 'store']);
+
+Route::resource('/comunity', ComunityController::class)->middleware('auth');
 
 

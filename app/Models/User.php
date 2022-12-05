@@ -49,9 +49,29 @@ class User extends Authenticatable
         return $this->HasMany(Post::class);
     }
 
+    public function comentary()
+    {
+        return $this->HasMany(Comentary::class);
+    }
+
+    public function comunityPost()
+    {
+        return $this->HasMany(ComunityPost::class);
+    }
+
     public function payment()
     {
         return $this->HasMany(Payment::class);
+    }
+
+    // public function comunity()
+    // {
+    //     return $this->HasMany(Comunity::class);
+    // }
+
+    public function comunity()
+    {
+        return $this->belongsToMany(Comunity::class, 'comunity_users', 'comunity_id', 'user_id');
     }
     
     public function getRouteKeyName()

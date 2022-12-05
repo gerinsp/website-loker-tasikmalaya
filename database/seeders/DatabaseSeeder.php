@@ -2,14 +2,18 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use App\Models\User;
-use App\Models\Category;
 use App\Models\Post;
-use App\Models\Payment;
-use App\Models\Company;
+use App\Models\User;
 use App\Models\Study;
+use App\Models\Company;
+use App\Models\Payment;
+use App\Models\Category;
+use App\Models\Comunity;
 use App\Models\Location;
+use App\Models\Comentary;
+use App\Models\ComunityPost;
+use App\Models\ComunityUser;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -56,7 +60,50 @@ class DatabaseSeeder extends Seeder
             'study' => 'S1'
         ]);
 
+        Comunity::create([
+            'name' => 'Tasikmalaya',
+            'deskripsi' => 'Komunitas Khusus warga Tasikmalaya'
+        ]);
+
+        Comunity::create([
+            'name' => 'Bandung',
+            'deskripsi' => 'Komunitas Khusus warga Bandung'
+        ]);
+
+        Comunity::create([
+            'name' => 'Ciamis',
+            'deskripsi' => 'Komunitas Khusus warga Ciamis'
+        ]);
+
+        ComunityUser::factory(5)->create();
+
+        ComunityPost::create([
+            'title' => 'Postingan Pertama',
+            'slug' => 'postingan-pertama',
+            'body' => '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloremque nisi officiis cupiditate magnam. Quisquam iusto molestiae odit sit, esse reiciendis itaque totam, blanditiis ex autem eius, atque dicta ut ea. Quas perspiciatis deleniti nesciunt earum quod, dignissimos sit voluptatibus id modi.</p>',
+            'user_id' => mt_rand(1,3),
+            'comunity_id' => mt_rand(1,3)
+        ]);
+
+        ComunityPost::create([
+            'title' => 'Postingan Kedua',
+            'slug' => 'postingan-kedua',
+            'body' => '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloremque nisi officiis cupiditate magnam. Quisquam iusto molestiae odit sit, esse reiciendis itaque totam, blanditiis ex autem eius, atque dicta ut ea. Quas perspiciatis deleniti nesciunt earum quod, dignissimos sit voluptatibus id modi.</p>',
+            'user_id' => mt_rand(1,3),
+            'comunity_id' => mt_rand(1,3)
+        ]);
+
+        ComunityPost::create([
+            'title' => 'Postingan Ketiga',
+            'slug' => 'postingan-ketiga',
+            'body' => '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloremque nisi officiis cupiditate magnam. Quisquam iusto molestiae odit sit, esse reiciendis itaque totam, blanditiis ex autem eius, atque dicta ut ea. Quas perspiciatis deleniti nesciunt earum quod, dignissimos sit voluptatibus id modi.</p>',
+            'user_id' => mt_rand(1,3),
+            'comunity_id' => mt_rand(1,3)
+        ]);
+
         Location::factory(4)->create();
+
+        Comentary::factory(5)->create();
 
         Category::create([
             'name' => 'IT',
