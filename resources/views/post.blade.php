@@ -87,7 +87,7 @@
               <div class="d-flex justify-content-end float-end">
                 <ul class="list-inline ">
                   <li class="list-inline-item">
-                    <p class="card-text"><small class="text-muted"><i class="bi bi-alarm"></i> Created {{ $post->created_at->diffForHumans() }}</small></p>
+                    <p class="card-text"><small class="text-muted"><i class="bi bi-alarm"></i> Diposting {{ $post->created_at->diffForHumans() }}</small></p>
                   </li>
                   <li class="list-inline-item">
                     <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comentary extends Model
+class ComentReplay extends Model
 {
     use HasFactory;
 
@@ -14,13 +14,8 @@ class Comentary extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function comunityPost()
+    public function comentary()
     {
-        return $this->belongsTo(ComunityPost::class);
-    }
-
-    public function comentReply()
-    {
-        return $this->HasMany(ComentReply::class);
+        return $this->belongsTo(Comentary::class);
     }
 }

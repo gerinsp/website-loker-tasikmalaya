@@ -22,11 +22,11 @@ class PostFactory extends Factory
             'status_kerja' => 'full-time',
             'gaji' => '1-2 Juta',
             // 'body' => '<p>' . implode('</p><p>',$this->faker->paragraphs(mt_rand(5,10)) . '</p>')
-            'kualifikasi' => collect($this->faker->paragraphs(mt_rand(5,10)))
+            'kualifikasi' => collect($this->faker->paragraphs(mt_rand(1,2)))
                     ->map(function($p) {
                         return "<p>$p</p>";
                     })->implode(''),
-            'deskripsi' => collect($this->faker->paragraphs(mt_rand(5,10)))
+            'deskripsi' => collect($this->faker->paragraphs(mt_rand(1,2)))
                     ->map(function($p) {
                         return "<p>$p</p>";
                     })->implode(''),

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comentary;
 use App\Models\Comunity;
+use App\Models\Comentary;
 use App\Models\ComunityPost;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreComentaryRequest;
 use App\Http\Requests\UpdateComentaryRequest;
+use App\Models\ComentReplay;
 
 class ComentaryController extends Controller
 {
@@ -53,7 +55,8 @@ class ComentaryController extends Controller
             'title' => 'Komentar',
             'active' => 'comunity',
             'comunityPost' => ComunityPost::find($id),
-            'comentaries' => Comentary::where('comunity_post_id', $id)->get()
+            'comentaries' => Comentary::where('comunity_post_id', $id)->get(),
+            'replays' => ComentReplay::all()
         ]);
     }
 

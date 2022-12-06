@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\Comunity;
 use App\Models\Location;
 use App\Models\Comentary;
+use App\Models\ComentReplay;
 use App\Models\ComunityPost;
 use App\Models\ComunityUser;
 use Illuminate\Database\Seeder;
@@ -104,6 +105,8 @@ class DatabaseSeeder extends Seeder
         Location::factory(4)->create();
 
         Comentary::factory(5)->create();
+
+        ComentReplay::factory(5)->create();
 
         Category::create([
             'name' => 'IT',

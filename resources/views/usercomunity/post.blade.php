@@ -21,10 +21,7 @@
       <div class="card mb-3 mt-4">
         <div class="card-body mt-2">
           <h5 class="card-text">
-            <svg xmlns="http://www.w3.org/2000/svg" width="37px" class="mt-0" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-              </svg> {{ $comunityPost->user->name }} • <small class="text-muted fs-6 ">{{ $comunityPost->created_at->diffForHumans() }}</small></h5>
+            <img src="../img/user.png" style="width: 50px" alt=""> {{ $comunityPost->user->name }} • <small class="text-muted fs-6 ">{{ $comunityPost->created_at->diffForHumans() }}</small></h5>
             <h5 class="mt-3 card-title">{{ $comunityPost->title }}</h5>
           <p class="card-text">{!! $comunityPost->body !!}</p>
         </div>
