@@ -15,8 +15,6 @@
                 <form action="/blog">
                     @if (request('category'))
                         <input type="hidden" name="category" value="{{ request('category') }}">
-                    @elseif (request('user'))
-                    <input type="hidden" name="user" value="{{ request('user') }}">
                     @endif
                     <div class="input mb-3">
                         <input type="text" class="form-control" placeholder="Cari Loker..." name="search" style="border: none;">
@@ -159,6 +157,22 @@
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12 mb-3">
+                    <div class="card" >
+                        <div class="card-body">
+                            <h3>Trending</h3>
+                                <ul class="list-group list-group-flush">
+                                    @foreach ($trendings as $trending)
+                                        <li class="list-group-item">
+                                            <a href="/post/{{ $trending->slug }}" class="text-decoration-none text-dark">
+                                                {{ $loop->iteration }}. {{ $trending->posisi }} ({{ $trending->company->company_name }})
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
                         <div class="card" >
                             <div class="card-body">
                                 <h3>Kategori</h3>
@@ -168,10 +182,6 @@
                                         @endforeach
                                     </ul>
                             </div>
-                        </div>
-                </div>
-                <div class="col-md-12 mb-3">
-                    <div class="card" >
                         <div class="card-body">
                             <h3>Pendidikan</h3>
                                 <ul class="list-group list-group-flush">
@@ -180,10 +190,6 @@
                                     @endforeach
                                 </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 mb-3">
-                    <div class="card" >
                         <div class="card-body">
                             <h3>Lokasi</h3>
                                 <ul class="list-group list-group-flush">

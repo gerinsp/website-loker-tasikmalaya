@@ -19,7 +19,7 @@
       </div>
       @endif
 
-      <div class="card mb-3 mt-4">
+      <div class="card mb-4 mt-4">
         <div class="card-body mt-2">
           <h5 class="card-text">
             <img src="../img/user.png" style="width: 50px" alt=""> {{ $comunityPost->user->name }} • <small class="text-muted fs-6 ">{{ $comunityPost->created_at->diffForHumans() }}</small></h5>
@@ -43,6 +43,8 @@
             </a>
         </div>
       </div>
+
+      <h3>{{ $comunityPost->comentary->count() }} Komentar</h3>
 
     <div class="row d-flex justify-content-end">
         <div class="col-md-11">

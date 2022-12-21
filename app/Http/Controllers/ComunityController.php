@@ -7,6 +7,7 @@ use App\Models\ComunityPost;
 use App\Models\User;
 use App\Http\Requests\StoreComunityRequest;
 use App\Http\Requests\UpdateComunityRequest;
+use Illuminate\Support\Facades\Cache;
 
 class ComunityController extends Controller
 {
@@ -17,11 +18,17 @@ class ComunityController extends Controller
      */
     public function index()
     {
+        $comunity = Cache::remember('comunity', 60, function(){
+            return Comunity::all();
+        });
+        $comunityPost = Cache::remember('comunity.posts', 60, function(){
+            return ComunityPost::all();
+        });
         return view('comunity.index', [
             'title' => 'Komunitas',
             'active' => 'comunity',
-            'comunities' => Comunity::all(),
-            'comunityPosts' => ComunityPost::all()
+            'comunities' => $comunity,
+            'comunityPosts' => $comunityPost
         ]);
     }
 
